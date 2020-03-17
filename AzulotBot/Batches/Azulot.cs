@@ -22,7 +22,7 @@ namespace AzulotBot.Batches
 
         public async Task Execute()
         {
-            _client = new DiscordSocketClient(new DiscordSocketConfig{LogLevel = Discord.LogSeverity.in});
+            _client = new DiscordSocketClient(new DiscordSocketConfig{LogLevel = Discord.LogSeverity.Info});
             _client.Log += x =>
             {
                 Console.WriteLine($"{x.Message}, {x.Exception}");
