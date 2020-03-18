@@ -14,10 +14,10 @@ namespace AzulotBot.Modules
         {
             var (x, y, z) = Gacha.Execute();
 
-            await ReplyAsync(":S_azumi2:");
+            await ReplyAsync("<:S_azumi2:667170520923635732>");
             await ReplyAsync("ドゥルルルル");
-            await ReplyAsync($":{x}: :{y}: :{z}:");
-            if (x == y && y == z) await ReplyAsync(":S_harudai21:");
+            await ReplyAsync($"{x} {y} {z}");
+            if (x == y && y == z) await ReplyAsync("<:S_harudai21:668615102341185537>");
             else await ReplyAsync("あぁ～");
         }
     }

@@ -9,13 +9,9 @@ namespace AzulotBot.Models
     {
         public static string[] Emoji =
         {
-            "S_tom1",
-            "S_tukasa1",
-            "S_tanya1",
-            "S_azumi1",
-            "S_kazuma2",
-            "S_kuwano1",
-            "S_haruki2"
+            "<:S_tom1:687991031744299017>",
+            "<:S_tukasa1:683084728533778449>",
+            "<:S_tanya1:683084337087774726>"
         };
 
         //もうちょっとどうにかいい感じにしたいところ
