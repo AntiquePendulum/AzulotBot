@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AzulotBot.Models
 {
-    public class Gacha
+    public static class Gacha
     {
         public static string[] Emoji =
         {
@@ -19,7 +19,7 @@ namespace AzulotBot.Models
         };
 
         //もうちょっとどうにかいい感じにしたいところ
-        public (string x, string y, string z) Execute() => (RandomElementAt(Emoji), RandomElementAt(Emoji), RandomElementAt(Emoji));
+        public static (string x, string y, string z) Execute() => (RandomElementAt(Emoji), RandomElementAt(Emoji), RandomElementAt(Emoji));
 
 
         private static readonly Random Rand = new Random();
