@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleAppFramework;
+using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 
@@ -28,6 +29,17 @@ namespace AzulotBot.Batches
                 Console.WriteLine($"{x.Message}, {x.Exception}");
                 return Task.CompletedTask;
             };
+        }
+
+        private async Task ReceiveCommand(SocketMessage message)
+        {
+            if(!(message is SocketUserMessage msg) || msg.Author.IsBot) return;
+
+            var argPos = 0;
+            if (!(msg.HasCharPrefix('!', ref argPos)) || msg.HasMentionPrefix(_client.CurrentUser, ref argPos)) return;
+            var context = new CommandContext(_client, msg);
+
+
         }
     }
 }
