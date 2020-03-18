@@ -28,7 +28,6 @@ namespace AzulotBot.Batches
                 Console.WriteLine($"{x.Message}, {x.Exception}");
                 return Task.CompletedTask;
             };
-
         }
     }
 }
